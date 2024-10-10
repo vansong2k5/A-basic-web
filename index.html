@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Books Store</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/phone.css"/>
+    <link rel="stylesheet" href="/style/tablet.css"/>
+</head>
+<body>
+    <header>
+        <div id="slogans">
+            <h4 id="slogan">READ MORE - DREAM MORE</h4>
+       </div>
+        <div class="head flex">
+
+            <div class="head1 flex">
+                <img id="logo" class="flex" src="images/logo.png" alt="LOGO">
+            </div>
+
+            <div class="flex search">
+                <div class="flex">
+                    <input type="search" oninput="searchBooks()" class="Search" id="search" placeholder="Tìm kiếm" Tìm Kiếm>
+                    <button type="button"><i class="fa-solid fa-magnifying-glass flex"></i></button>
+                
+                </div>
+            </div>
+            
+            <div class="head2">
+                <ul class="menu_head flex">
+                    <li><a href="#"><i class="fa-solid fa-user"></i>ĐĂNG NHẬP</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-plus"></i> GIỎ HÀNG</a></li>
+                    <li id="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+
+            <div>
+            <ul id="results" ></ul>
+            </div>
+
+        <div id="toggle">
+            <ul>
+                <li><a class="login" href="#"><i class="fa-solid fa-user"></i>Đăng Nhập</a>
+                    <a id="icon_toggle"><i class="fa-solid fa-bars"></i></a>
+                </li>  
+            </ul>
+        </div>
+        <nav id="menu">
+            <ul class="menu flex">
+                <li class="sub">
+                    <a id="mainPage" href="#">Trang chủ</a>
+                </li>
+                <li class="sub">
+                    <a id href="#">Thể loại</a>
+                    <ul class="menu subcontent">
+                        <li><a id="devils" href="#">Kinh Dị</a></li>
+                        <li><a id="novels" href="#">Tiểu Thuyết</a></li>
+                        <li><a id="comics" href="#">Truyện Tranh</a></li>
+                        <li><a id="psychology" href="#">Tâm Lí</a></li>
+                        <li><a id="economy" href="#">Kinh Tế</a></li>
+                        <li><a id="allBook" href="#">Tất Cả</a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a href="#">Khuyến Mãi<i id="saleicon" class="fa-solid fa-gift"></i></a>
+                    <ul class="menu subcontent">
+                        <li><a class="gift" href="#">Giảm 15% khi mua từ 3 quyển sách</a></li>
+                        <li><a class="gift" href="#">Giảm 20% khi mua từ 5 quyển sách</a></li>
+                        <li><a class="gift" href="#">Giảm 25% khi mua từ 7 quyển sách</a></li>
+                    </ul>
+                </li>
+                <li class="sub">
+                    <a id="contact" href="#">Liên hệ</a>
+                </li>
+            </ul>
+            <hr>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="img_slider flex">
+        <div class="items">
+            <img src="/images/bg1.png" alt="intro">
+        </div>
+        <div class="items">
+            <img src="/images/bg2.png" alt="intro">
+        </div>
+        <div class="items">
+            <img src="/images/bg3.png" alt="intro">
+        </div>
+        <div class="items">
+            <img src="/images/bg2.png" alt="intro">
+        </div>
+        <div class="items">
+            <img src="/images/bg3.png" alt="intro">
+        </div>      
+    </div>
+        <div class="buttons">
+        <button id="pre"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    </div>
+
+    <main>
+        <section id="booksInfo" class="flex">
+            <div class="bookInfo flex">
+                <div class="bookImg">
+                  <img id="focusImg" src="images/book1.jpg" alt="Book's Image">
+                </div>
+                <div class="bookDetail">
+                  <h3 class="bookTitle">Tên Sách</h3>
+                  <h4 class="bookGenre">Thể loại</h4>
+                  <h4 class="bookAuthor">Tác giả</h4>
+                  <div id="price">
+                    <h4 class="bookPrice">Giá tiền</h4>
+                    <i class="fa-solid fa-dong-sign"></i>
+                  </div>
+                  <div class="bookAction">
+                    <button class="btn btnBuy">Mua</button>
+                    <button class="btn btnAdd">Thêm Vào Giỏ Hàng</button>
+                  </div>
+                </div>
+                <a id="cancel"><i class="fa-regular fa-circle-xmark"></i></a>
+            </div>
+            <div></div>
+        </section>
+
+        <section id="bestSeller">
+            <div class="sec_title">
+                <h2>Sách Bán Chạy</h2>
+                <hr>
+            </div>
+           <div class="list">
+            
+            <div class="book_mem">
+                <div>
+                    <img src="images/book1.jpg" alt="BOOK">
+                </div>
+                <div>
+                    <ul class="book_title">     
+                        <li>A Study Drowning</li>
+                        <li class="hiden_mobile">Tiểu thuyết</li>
+                        <li>Ava Reid</li>
+                        <li>99.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="book_mem">
+                <div><img src="images/book2.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Onyx Storm</li>
+                        <li class="hiden_mobile">Kinh dị</li>
+                        <li>Rebecca Yarros</li>
+                        <li>190.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book3.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>The Wren in the Holly Library</li>
+                        <li class="hiden_mobile">Tiểu thuyết</li>
+                        <li>K.A.Linde</li>
+                        <li>150.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book4.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Fourth Wing</li>
+                        <li class="hiden_mobile">Kinh dị</li>
+                        <li>Rebecca Yarros</li>
+                        <li>190.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book5.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Hooked</li>
+                        <li class="hiden_mobile">Tiểu thuyết</li>
+                        <li>Imyly Mcintire</li>
+                        <li>170.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="book_mem">
+                <div><img src="images/book6.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>The Games Gods Play</li>
+                        <li class="hiden_mobile">Tiểu thuyết</li>
+                        <li >Abigail Owen</li>
+                        <li>120.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="book_mem">
+                <div><img src="images/book7.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Obsidian</li>
+                        <li class="hiden_mobile">Tiểu thuyết</li>
+                        <li>Jennifer L.Armentrout</li>
+                        <li>170.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="book_mem">
+                <div><img src="images/book8.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Five Broken Blades</li>
+                        <li class="hiden_mobile">Kinh dị</li>
+                        <li>Mai Corland</li>
+                        <li>130.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="book_mem">
+                <div><img src="images/book9.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Heaven Breaker</li>
+                        <li class="hiden_mobile">TIểu thuyết</li>
+                        <li>Sala Wolf</li>
+                        <li>140.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="book_mem">
+                <div><img src="images/book10.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Throne of Glass</li>
+                        <li class="hiden_mobile">Kinh dị</li>
+                        <li>Sarah J.Maas</li>
+                        <li>160.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="book_mem">
+                <div><img src="images/book11.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Watch Me</li>
+                        <li class="hiden_mobile">Tâm lí</li>
+                        <li>Tahereh Mafi</li>
+                        <li>130.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book12.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>The Spellshop</li>
+                        <li class="hiden_mobile">Tiểu thuyết</li>
+                        <li>Sarah Beth Durst</li>
+                        <li>150.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="book_mem">
+                <div><img src="images/book13.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Somewhere Bayond the Sea</li>
+                        <li class="hiden_mobile">Tiểu thuyết</li>
+                        <li>TJ Klune</li>
+                        <li>170.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            </div>
+        </section>
+    
+        <section id="newBooks">
+            <div class="sec_title">
+                <h2>Sách Mới</h2>
+                <hr>
+            </div>
+            <div class="book flex">
+                <div class="book_mem">
+                    <div><img src="images/book14.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Hoàng tử bé</li>
+                            <li class="hiden_mobile">Tâm lí</li>
+                            <li>Antoine De Saint-Exupéry</li>
+                            <li>90.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="book_mem">
+                    <div><img src="images/book15.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Totto-chan bên cửa sổ</li>
+                            <li class="hiden_mobile">Tiểu thuyết</li>
+                            <li>Kuroyanagi Tetuko</li>
+                            <li>99.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book16.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Sức mạnh của buông bỏ</li>
+                            <li class="hiden_mobile">Tâm lí</li>
+                            <li>John Purkiss</li>
+                            <li>89.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book17.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Nó đây rồi</li>
+                            <li class="hiden_mobile">Tâm lí</li>
+                            <li>Sơn Đào</li>
+                            <li>119.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="book_mem">
+                    <div><img src="images/book18.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Làm sao để</li>
+                            <li class="hiden_mobile">Tâm lí</li>
+                            <li>Randall Munroe</li>
+                            <li>99.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book19.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Financial Freedom</li>
+                            <li class="hiden_mobile">Kinh tế</li>
+                            <li>Grant Sabatier</li>
+                            <li>120.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book20.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Hard core psychology</li>
+                            <li class="hiden_mobile">Tâm lí</li>
+                            <li>Diêu Nghiêu</li>
+                            <li>99.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book21.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Vùng đất quỹ tha ma bắt</li>
+                            <li class="hiden_mobile">Kinh dị</li>
+                            <li class="hiden_mobile">Kevin Chen</li>
+                            <li>90.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book22.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Dám can đảm</li>
+                            <li class="hiden_mobile">Tâm lí</li>
+                            <li>William H.McRaven</li>
+                            <li>120.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book23.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Attack on Titan</li>
+                            <li class="hiden_mobile">Truyện tranh</li>
+                            <li>Hajime Isayama</li>
+                            <li>99.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book24.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Gachiakuta</li>
+                            <li class="hiden_mobile">Truyện tranh</li>
+                            <li>Kei Urana</li>
+                            <li>79.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+           
+                <div class="book_mem">
+                    <div><img src="images/book261.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Conan</li>
+                            <li class="hiden_mobile">Truyện tranh</li>
+                            <li>Gosho Aoyama</li>
+                            <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="book_mem">
+                    <div><img src="images/book33.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Kinh tế học hài hước</li>
+                            <li class="hiden_mobile">Kinh tế</li>
+                            <li>D.Levitt & J.Dubner</li>
+                            <li>99.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="book_mem">
+                    <div><img src="images/book34.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Cây cam ngọt của tôi</li>
+                            <li class="hiden_mobile">Kinh tế</li>
+                            <li>Jose Mauro</li>
+                            <li>119.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="book_mem">
+                    <div><img src="images/book35.jpg" alt="BOOK"></div>
+                    <div>
+                        <ul class="book_title">
+                            <li>Người giàu có nhất thành Babylon</li>
+                            <li class="hiden_mobile">Kinh tế</li>
+                            <li>Geogre Samuel Clason</li>
+                            <li>120.000<i class="fa-solid fa-dong-sign"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="saleBooks">
+            <div class="sec_title">
+                <h2>Sách Giảm Giá</h2>
+                <hr>
+            </div>
+           <div class="list">
+            <div class="book_mem">
+                <div><img src="images/book26.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Hai vạn năm dưới biển</li>
+                        <li class="hiden_mobile">Truyện tranh</li>
+                        <li>Jules Verne</li>
+                        <li><del class="salePrice">65.000</del><i class="fa-solid fa-dong-sign"></i></li>
+                        <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="book_mem">
+                <div><img src="images/book27.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Wind and Truth</li>
+                        <li class="hiden_mobile">Truyện tranh</li>
+                        <li>Brandon Sanderson</li>
+                        <li><del class="salePrice">79.000</del><i class="fa-solid fa-dong-sign"></i></li>
+                        <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book28.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Jujustu Kaisen 23</li>
+                        <li class="hiden_mobile">Truyện tranh</li>
+                        <li>Gege Akutami</li>
+                        <li><del class="salePrice">65.000</del><i class="fa-solid fa-dong-sign"></i></li>
+                        <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book29.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Quản lí chuỗi cung ứng</li>
+                        <li class="hiden_mobile">Kinh tế</li>
+                        <li class="hiden_mobile">David Blanchard</li>
+                        <li><del class="salePrice">89.000</del><i class="fa-solid fa-dong-sign"></i></li>
+                        <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book30.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Content đúng là King </li>
+                        <li class="hiden_mobile">Kinh tế</li>
+                        <li>Dan Norris</li>
+                        <li><del class="salePrice">99.000</del><i class="fa-solid fa-dong-sign"></i></li>
+                        <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book31.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Tư duy như Stephen Hawking</li>
+                        <li class="hiden_mobile">Tâm lí</li>
+                        <li>Daniel Smith</li>
+                        <li><del class="salePrice">89.000</del><i class="fa-solid fa-dong-sign"></i></li>
+                        <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="book_mem">
+                <div><img src="images/book32.jpg" alt="BOOK"></div>
+                <div>
+                    <ul class="book_title">
+                        <li>Điềm tĩnh và Nóng giận  </li>
+                        <li class="hiden_mobile">Tâm lí</li>
+                        <li class="hiden_mobile">Tạ Quốc Kế</li>
+                        <li><del class="salePrice">95.000</del><i class="fa-solid fa-dong-sign"></i></li>
+                        <li>49.000<i class="fa-solid fa-dong-sign"></i></li>
+                    </ul>
+                </div>
+            </div>
+
+           
+            </div>
+        </section>
+    </main>
+
+    <div>
+        <a href="javascript:;" id="backButton"><i class="fa-solid fa-plane-up"></i></a>
+    </div>
+    <footer>
+        <hr>
+        <img id="outtro" src="images/foot.jpg" alt="footer_img">
+        <nav class="footer_nav flex">
+            <div>
+                <h4 id="knvct">KẾT NỐI VỚI CHÚNG TÔI</h4>
+                <ul id="infor">
+                    <li>
+                        <a href="https://www.facebook.com/"><i class="contact fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/"><i class="contact fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/X"><i class="contact fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://mail.google.com"><i class="contact fa-regular fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <span>
+                <h4 id="ttll">THÔNG TIN LIÊN LẠC</h4>
+                <p>
+                    Địa chỉ: 35 – 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, TP. HCM.
+                    <br>
+                    Điện thoại: 028-38364748.
+                </p>
+            </span>
+        </nav>
+        <section>
+
+        </section>
+    </footer>
+
+    <script src="script/script.js"></script>
+    <script src="script/data.js"></script>
+    <script src="script/search.js"></script>
+    
+</body>
+</html>

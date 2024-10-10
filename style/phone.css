@@ -1,0 +1,225 @@
+@media screen and (max-width: 500px) {    
+    *{
+        margin: 0 0.1rem;
+    }
+    /* header */
+    div#slogans{
+        display: none;
+    }
+    #logo{
+        width: 6rem;
+        height: 3rem;
+        margin: 1rem 0 0 0;
+        }
+
+    .search{
+        width: 17.3rem; 
+        margin: 1rem 0 0 0;
+        margin-right: 0;
+        border: 1px solid var(--primary-color);
+        border-radius: 50px;
+    }
+    
+    .search > input{
+        width: 85%;
+        height: 3rem;
+        font-size: 1.2rem;
+        margin:0 0 0 0.375em;   
+    }
+    
+    .search > button{   
+        border: none;
+        width: 0.7rem;
+        height: 0.7rem;
+        font-size: 1rem;
+        margin:0.1rem;
+        padding: 0;
+    }
+
+    #results{
+        display: none;
+        width: 59%;
+        padding-left: 0;
+        list-style-type: none;
+        position: absolute;
+        left: 7.5em;
+        top: 4.2em;
+        background-color: #ecf0f1;
+        border: 1px solid #ccc;
+        z-index: 1000;
+    }
+
+    ul.menu_head{
+        padding: 0;
+        margin: 1rem 0 0 0;
+        font-size: 0.7rem;
+    }
+    /* Ẩn giỏ hàng + đăng nhập  */
+    ul.menu_head>li{
+        display:none;
+    } 
+
+    ul.menu_head>li#cart{
+        display: block;
+    }
+
+    li#cart>a>i{
+        font-size: 2.5em;
+    }
+
+    nav#menu{
+        display:none;
+      }
+    ul.menu li{
+        font-size: 0.7em;
+        text-transform: capitalize;
+    }
+    
+    /* nav bar */
+    div#toggle{
+        display:block;
+    }
+    
+    #toggle>ul>li{
+        width: 100%;
+        margin-top: 0.3em;
+        padding: 0.3em;
+        display: block;
+        font-size: 1em;
+        color:#ecf0f1;
+        background-color: #3498db;
+    }
+
+    a.login{
+        text-decoration: none;
+        padding-left: 1rem;
+        color:#d0ebf0;
+        
+    }
+    ul>li>a.login{
+        position: absolute;
+        left: 1em;
+    }
+
+    #icon_toggle>i{
+        position: absolute;
+        right: 1em;
+        }
+
+    #icon_toggle{
+        font-size: 1.2em;
+        color:#d0ebf0
+    }
+    #toggle>ul{
+    padding-left: 0;
+    }
+
+    /*intro*/
+    .slider{
+        height: 185px;
+    }
+
+    .slider .buttons{
+        top:4.5em;
+    }
+
+    .slider .dots{
+        top:9.5em;
+    }
+
+    .book_mem{
+        width: 30%;
+        height: 50%;
+    }
+
+    
+    .sec_title{
+        margin-bottom: 1rem;
+    }
+    
+    
+    /*Book_info*/
+    #booksInfo {
+        padding: 0.2rem;
+        width: 100%;
+    }
+    
+    .bookImg{
+       padding-left: 1rem;
+    }
+
+    .bookTitle {
+        margin: 0.3rem;
+    }
+      
+    .bookAuthor {
+        margin: 0.3rem;
+    }
+    
+    .bookGenre{
+        margin: 0.3rem;
+    }
+    .bookMeta{
+        display: none;
+    }
+    .btnBuy,.btnAdd {
+        background-color: #e74c3c;
+    }
+
+    .bookAction{
+        padding: 0;
+        margin: 0;
+    }
+    
+    #cancel{
+        position: absolute;
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
+        top: 0.5rem;
+        right: 0.4em;
+    }
+
+    .bookAction{
+        margin-left: 0;
+    }
+
+    /*footer*/
+    footer{
+        margin-top: 0.1rem;
+    }
+    .footer_nav{
+        flex-direction: column;
+    }
+    
+    ul#infor{
+        list-style-type: none;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #ttll{
+        display: none;
+    }
+    #knvct{
+        font-size: 0.9rem;
+    }
+
+    footer > img{
+        height: 10rem;
+    }
+    
+    .footer_nav > div{
+        text-align: center;
+    }
+    
+    
+    /*back button*/
+    #backButton{
+        right: 4px;
+        bottom: 10px;
+        width: 3rem;
+        height: 3rem;
+    } 
+}

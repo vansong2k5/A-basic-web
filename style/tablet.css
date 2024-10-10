@@ -1,0 +1,225 @@
+@media screen and ( max-width:950px) and (min-width:500px){ 
+    *{
+        margin: 0 0.1rem;
+    }
+    
+    /* header */
+    *{
+        margin: 0 0.1rem;
+    }
+    /* header */
+    div#slogans{
+        display: none;
+    }
+    #logo{
+        width: 6rem;
+        height: 3rem;
+        margin: 1rem 0 0 2rem;
+        }
+
+    .search{
+        width: 17.3rem; 
+        margin: 1rem 0 0 0;
+        margin-right: 0;
+        border: 1px solid var(--primary-color);
+        border-radius: 50px;
+    }
+    
+    input.Search{
+        width: 85%;
+        height: 3rem;
+        font-size: 1.2rem;
+        margin:0 0 0 0.375em;   
+    }
+    #results{
+        display: none;
+        width: 53%;
+        padding-left: 0;
+        list-style-type: none;
+        position: absolute;
+        left: 11.5em;
+        top: 4.7em;
+        background-color: #ecf0f1;
+        border: 1px solid #ccc;
+        z-index: 1000;
+    }
+
+    div.flex>button{
+        margin-right:1rem;
+      }
+
+    ul.menu_head{
+        padding: 0;
+        margin: 1rem 0 0 0;
+        font-size: 0.7rem;
+    }
+    
+    .search{
+        width: 30rem;
+        display: block;
+        margin-left: 3rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 50px;
+    }
+
+    ul.menu_head{
+        margin: 0;     
+    }
+    
+    ul.menu_head > li > a{
+        font-size: 1.5em;
+        margin: 1rem 0 0 1rem;
+    }
+    /*intro*/
+    .slider{
+        height: 250px;
+    }
+
+    .slider .buttons{
+        top:6.5em;
+    }
+
+    .slider .dots{
+        top:13.4em;
+    }
+ 
+     .book_mem{
+         width: 30%;
+         height: 50%;
+     }
+    /* sections */
+    #newBook{
+        margin: 2rem 0;
+    }
+    
+    /*books CSS*/
+    .book{
+        flex-wrap: wrap;
+        border-left: 2px solid white;
+        padding: 0;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .book_mem{
+        width: 15%;
+        height: 40%;
+        padding-top: 0.3rem;
+        display: inline-block;
+    }
+    
+    .book_mem > img:hover{
+        transform:scale(1.04);
+        overflow: hidden;
+    }
+    
+    .book_mem > img{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        transition: transform 0.5s;
+    }
+    
+    .book_mem > ul.book_title{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    /* span.book_mem{
+        margin-right: 0.1rem;
+    }
+     */
+    
+    /*Book_info*/
+    .bookInfo {
+        background-color: #d0ebf0;
+        padding-right: 5rem;
+      }
+      
+      .bookImg img {
+        width: 100%;
+        height: 80%;
+      }
+      
+      .bookTitle {
+        margin-bottom: 1.5rem;
+        }
+      
+    .bookAuthor {
+        margin-bottom: 1.5rem;
+      }
+    
+    .bookGenre{
+        margin:0 0 3rem 0.1rem;
+      }
+
+      .bookMeta{
+        display: none;
+    }
+
+      .btnBuy {
+        background-color: #e74c3c;
+        margin-right: 2rem;
+      }
+      
+      .btnAdd {
+        background-color: #e74c3c
+      }
+
+    .bookAction{
+        padding-left: 5rem;
+      }
+    
+      #cancel{
+        top: 0.4rem;
+        right: 0.3rem;
+      }
+    
+    
+    
+    /*footer*/
+    footer{
+        margin-top: 0.1rem;
+    }
+    .footer_nav{
+        flex-direction: column;
+    }
+    
+    ul#infor{
+        list-style-type: none;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #ttll{
+        display: none;
+    }
+    #knvct{
+        font-size:1.5rem;
+    }
+
+    footer > img{
+        height: 10rem;
+    }
+    
+    .footer_nav > div{
+        text-align: center;
+    }
+    
+    
+    /*back button*/
+    #backButton{
+        right: 4px;
+        bottom: 10px;
+        width: 5rem;
+        height: 3rem;
+    } 
+}
+
+@media screen and (min-width: 451px) and (max-width: 600px){
+    #cancel{
+        top: 0.5rem;
+        right: 1em;
+      }   
+}
